@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StatusBar } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
 	NAVIGATION_BAR_BUTTON_ANDROID,
 	rowCenter,
@@ -11,19 +10,11 @@ import {
 } from '../../styles';
 
 const renderRightButtonMenu = (name) => {
-	const { saveButton } = styles;
-
 	switch (name) {
-		case 'Graph':
-			return (
-				<Text style={saveButton}>Graph</Text>
-			);
-		case 'md-person':
-			return <Icon name={'md-person'} size={30} color={NAVIGATION_BAR_BUTTON_ANDROID}/>;
-		case 'sort':
-			return <MaterialCommunityIcons name={'sort'} size={30} color={NAVIGATION_BAR_BUTTON_ANDROID}/>
+		case 'logo':
+			return <Icon name={'logo-github'} size={30} color={'#000'}/>;
 		default:
-			return <Icon name={name} size={30} color={NAVIGATION_BAR_BUTTON_ANDROID}/>;
+			return <Text/>;
 	}
 };
 
